@@ -1,0 +1,920 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primario: #0D0D0D;
+    --primary-text: #F2E205;
+    --botones: #F2CB05;
+    --second-text: #D9D9D9;
+    --second: #2E2E2E;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'Brushtike';
+    src: url(/fuente/brushstrike/Brushstrike\ trial.ttf);
+}
+
+@font-face {
+    font-family: 'Bold';
+    src: url('/fuente/MonumentExtended-Ultrabold.otf');
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('/fuente/MonumentExtended-Regular.otf');
+}
+
+body {
+    font-family: 'Regular';
+    background-color: var(--color-primario);
+    color: var(--second-text);
+    overflow-x: hidden;
+}
+
+/* INICIO SECCION NAV */
+/* Variables de color ejemplo */
+:root {
+    --second-text: white;
+    --botones: #f57c00;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    /* background: rgba(80, 79, 79, 0.1);
+    backdrop-filter: blur(10px); */
+    color: var(--second-text);
+}
+
+.nav-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.logo img {
+    width: 110px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: var(--second-text);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--botones);
+}
+
+/* Botón de hamburguesa */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    margin-left: 1rem;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--second-text);
+    transition: all 0.3s ease;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.95);
+        width: 250px;
+        padding: 2rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-links.show {
+        transform: translateX(0%);
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .nav-links {
+        width: 100%;
+    }
+}
+
+/* Pantallas grandes: ajustar si se rompe >1620px */
+@media (min-width: 1620px) {
+    .nav-container {
+        max-width: 1920px;
+        padding: 1rem 4rem;
+    }
+
+    .nav-links {
+        gap: 3rem;
+    }
+}
+/* FINAL SECCION NAV */
+
+/* INICIO SECCION BANNER */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+.slide {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.motivational {
+    font-family: 'Brushtike';
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+    text-align: center;
+    color: var(--second-text);
+    font-style: italic;
+    text-shadow: 2px 2px 4px #000;
+}
+.motivational span {
+    color: yellow;
+}
+/* FINAL SECCION BANNER */
+
+/* SECTION ABOUT US */
+.about-us {
+    background-image: url(/images/about-us.png);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 1920px;
+}
+
+.info-about {
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 80px;
+}
+
+.content-tex {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+}
+
+.sub-txt {
+    font-size: 24px;
+    font-family: 'Regular';
+    color: transparent;
+    -webkit-text-stroke: 0.5px var(--second-text);
+}
+
+.first-txt {
+    font-size: 40px;
+    font-family: 'Regular';
+    color: var(--primary-text);
+    margin-top: 20px;
+}
+
+.paragraph-txt {
+    margin-top: 30px;
+    font-size: 20px;
+    font-family: 'Regular';
+    color: var(--second-text);
+}
+
+.btn {
+    margin-top: 20px;
+    background-color: var(--botones);
+    padding: 9px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Regular';
+}
+
+.btn:hover {
+    background-color: var(--second);
+    color: var(--second-text);
+    transition: ease-in-out 0.2s;
+}
+
+.btn a {
+    text-align: center;
+    text-decoration: none;
+    color: var(--second)
+}
+
+.btn a:hover {
+    color: var(--second-text);
+}
+
+/* INICIO SECCION ROUTINES */
+.routines {
+    background-image: url(/images/fondos.png);
+    max-width: 1920px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+}
+
+.routine-info {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.content-r {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.r-txt1 {
+    color: var(--primary-text);
+    font-size: 40px;
+    font-family: 'Regular';
+}
+
+.r-txt {
+    font-size: 90px;
+    font-family: 'Regular';
+    color: transparent;
+    -webkit-text-stroke: 0.2px var(--second-text);
+}
+
+.r-txt2 {
+    font-size: 90px;
+    font-family: 'Regular';
+    color: transparent;
+    -webkit-text-stroke: 0.2px var(--second-text);
+    opacity: 20%;
+}
+
+.images-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    position: relative;
+    transform: translateY(-40%);
+}
+
+.img-hover {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.img-hover:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.basic-txt {
+    font-family: 'Brushtike';
+    color: var(--primary-text);
+    font-size: 24px;
+}
+
+.btn-r {
+    z-index: 2;
+    background-color: var(--botones);
+    padding: 9px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Regular';
+    cursor: pointer;
+    border: none;
+    width: fit-content;
+    margin-top: -85px;
+}
+
+.btn-r:hover {
+    background-color: var(--second);
+    color: var(--second-text);
+    transition: ease-in-out 0.2s;
+}
+/* FINAL ROUTINES */
+
+/* INICIO DE BLOG */
+.blog-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 20px;
+    background-image: url(/images/Mesa\ de\ trabajo\ 1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container1 {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* Cards */
+.blog-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    height: auto;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 20px;
+    font-size: 1.2rem;
+    color: var(--second);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: var(--second);
+    padding: 30px;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
+}
+
+.modal-content h3 {
+    margin-bottom: 10px;
+    color: var(--primary-text);
+}
+
+.modal-content p {
+    line-height: 1.6;
+    color: var(--second);
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--botones);
+}
+/* FINAL DE BLOG */
+
+/* INICIO DE TESTIMONIOS */
+.testimonios {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: url(/images/testimonios/fondo-testimonios.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 0;
+}
+.txt_coment {
+    font-size: 40px;
+    font-family: 'Regular';
+    color: var(--primary-text);
+}
+
+/* Carrusel */
+.carrusel-comentarios {
+    width: 100%;
+    max-width: 519px;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+.carrusel-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.comentario {
+    min-width: 100%;
+    box-sizing: border-box;
+    background-image: url(/images/testimonios/pexels-dimkidama-6796970.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 339px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.comentario p {
+    font-size: 16px;
+    color: var(--second-text);
+    font-family: 'Regular';
+}
+.comentario h4 {
+    margin-top: 16px;
+    color: var(--botones);
+    font-family: 'Regular';
+}
+/* FINAL DE TESTIMONIOS */
+/* INICIO DE CALENDARIO */
+.calendario {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-image: url(/images/Mesa\ de\ trabajo\ 1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 60px 20px;
+}
+
+.calendario .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.titulo-calendario {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-family: 'Regular';
+    color: var(--primary-text);
+}
+
+#calendar {
+    background-color: var(--second);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    min-height: 500px;
+    overflow-x: auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: var(--color-primario);
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+    position: relative;
+    border-radius: 10px;
+}
+.modal-content p{
+    color: var(--second-text);
+}
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--color-primario);
+    z-index: 1100;
+}
+
+.modal .close:hover {
+    color: var(--botones);
+}
+
+.modal-buttons {
+    margin-top: 15px;
+    text-align: right;
+}
+/* FINAL DE CALENDARIO */
+
+/* INICIO DE FOOTER */
+.footer {
+    max-width: 1920px;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/images/fondos.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo-content img {
+    width: 120px;
+    height: 120px;
+}
+
+.footer-content {
+    max-width: 1440px;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo-content img {
+    width: 180px;
+}
+
+.suscripcion-footer {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.suscripcion-footer h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.suscripcion-footer p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.formulario-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario-footer input {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.formulario-footer button {
+    background-color: var(--botones);
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.formulario-footer button:hover {
+    background-color: var(--primary-text);
+}
+
+.redes-footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.redes-footer p {
+    font-size: 1.1rem;
+    color: var(--primary-text);
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.iconos-redes {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.iconos-redes a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0) invert(1);
+    /* blanco en fondo oscuro */
+}
+
+.iconos-redes a:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.5);
+}
+/* FINAL DE FOOTER */
+
+/* -------------------- ESTILOS RESPONSIVOS -------------------- */
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Media Query: Tablets y móviles */
+@media (max-width: 1024px) {
+    .motivational {
+        font-size: 3em;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .info-about {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .sub-txt {
+        display: none;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .content-tex {
+        height: auto;
+    }
+
+    .first-txt {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .paragraph-txt {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .routines {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .routine-info,
+    .content-r {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .r-txt1 {
+        font-size: 30px;
+    }
+
+    .r-txt,
+    .r-txt2 {
+        font-size: 50px;
+    }
+
+    .images {
+        flex-direction: column;
+        gap: 2rem;
+        transform: none;
+    }
+
+    .images img {
+        width: 40%;
+    }
+
+    .btn-r {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .calendario {
+        flex-direction: column;
+        padding: 40px 1rem;
+        height: auto;
+    }
+
+    #calendar {
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .footer {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .footer-content {
+        height: auto;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .logo-content img {
+        width: 120px;
+        height: auto;
+    }
+
+    .suscripcion-footer h3 {
+        font-size: 1.2rem;
+    }
+
+    .formulario-footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .formulario-footer input,
+    .formulario-footer button {
+        width: 100%;
+    }
+    .video{
+        display: none;
+    }
+    .carrusel-comentarios{
+        width: 60%;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    .btn,
+    .btn-r {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .carousel {
+        height: 60vh;
+    }
+}
+@media (min-width: 1620px) {
+    .nav {
+        justify-content: space-between;
+        gap: 4rem;
+    }
+
+    .container {
+        max-width: 1700px;
+    }
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Force</title>
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.18/index.global.min.js'></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/LOGO/1x/Recurso 2.png" alt="Logo del gimnasio">
+            </div>
+
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#rutinas">Rutinas</a></li>
+                    <li><a href="#membresias">Membresías</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+
+                <!-- Botón Hamburguesa -->
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span><span></span><span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main>
+        <section class="carousel">
+            <div class="slide active">
+                <img src="images/banner/banner1.png" alt="Hombre realizando una sentadilla libre con barra" />
+                <p class="motivational">"NO SE TRATA DE <span>FUERZA</span>, SE TRATA DE <span>ACTITUD</span>."</p>
+            </div>
+            <div class="slide">
+                <img src="images/banner/banner2.png" alt="Hombre realizando ejercicios con una cuerda mecate para crossfit" />
+                <p class="motivational">"TU CUERPO <span> PUEDE </span> MAS, DE LO QUE <span>CREES</span>."</p>
+            </div>
+            <div class="slide">
+                <img src="images/banner/banner3.png" alt="Tres hombres haciendo dominadas en una competencia de crossfit" />
+                <p class="motivational">"CAMBIA <span>EXCUSAS </span>POR <span> METAS</span>."</p>
+            </div>
+        </section>
+        <!-- FINAL SECCION DE BANNER -->
+        <!-- INICIO SECCION ABOUT US -->
+        <section class="about-us">
+            <div class="info-about">
+                <div class="content">
+                    <div class="video">
+                        <video width="640" height="360" autoplay muted loop>
+                            <source src="video/855828-hd_1920_1080_30fps.mp4" type="video/mp4" alt="Video de un hombre levantado una mancuerna en forma de bola de acero con agarradera ">
+                        </video>
+                    </div>
+                    <div class="content-text">
+                        <h4 class="sub-txt">
+                            NOSOTROS
+                        </h4>
+                        <h2 class="first-txt">
+                            QUIENES SOMOS?
+                        </h2>
+                        <p class="paragraph-txt">
+                            Somos un gimnasio especializado en CrossFit, dedicado a transformar vidas a través del
+                            entrenamiento funcional de alta intensidad. Nuestro enfoque combina fuerza, resistencia y
+                            técnica en un ambiente motivador y comunitario. Contamos con coaches certificados,
+                            programación adaptada a todos los niveles y una comunidad que te impulsa a dar lo mejor de
+                            ti cada día.
+                        </p>
+                    </div>
+                </div>
+        </section>
+        <!-- FINAL SECCION ABOUT US -->
+        <!-- INICIO SECCION ROUTINES -->
+        <section class="routines">
+            <div class="routine-info">
+                <div class="content-r">
+                    <h2 class="r-txt1">RUTINAS</h2>
+                    <h2 class="r-txt">RUTINAS</h2>
+                    <h2 class="r-txt2">NUESTRAS RUTINAS</h2>
+                    <div class="images-wrapper">
+                        <div class="images">
+                            <div class="basico">
+                                <img src="/images/routines/basico.png" alt="Hombre joven realizando una rutina básica de crossfit" class="img-hover">
+                                <h3 class="basic-txt">Basico</h3>
+                                <p class="basic-parra">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="basico">
+                                <img src="/images/routines/intermedio.png" alt="Mujer realizando una sentadilla frontal con barra como parte de un entrenamiento intermedio" class="img-hover">
+                                <h3 class="basic-txt">Intermedio</h3>
+                                <p class="basic-parra">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="basico">
+                                <img src="/images/routines/avanzado.png" alt="Hombre empujando un trineo de CrossFit como parte de un entrenamiento de fuerza funcional" class="img-hover">
+                                <h3 class="basic-txt">Avanzado</h3>
+                                <p class="basic-parra">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FINAL SECCION ROUTINES -->
+        <!-- INICIO SECCION BLOG -->
+        <section class="blog-section">
+            <div class="container">
+                <h2 class="r-txt1">Blog</h2>
+                <h2 class="r-txt2">Blog</h2>
+                <div class="blog-cards">
+
+                    <!-- Card 1 -->
+                    <div class="card" onclick="openModal('modal1')">
+                        <img src="images/suplementos/this-supplement-sucks-HS_rvzx23SM-unsplash.jpg" alt="Hombre preparando su prework-out de suplementos">
+                        <h3>Suplementos</h3>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card" onclick="openModal('modal2')">
+                        <img src="images/suplementos/jannis-brandt-8manzosDSGM-unsplash.jpg"
+                            alt="Hombre con un plato de comida muy balanceada despues de un entrenamiento de cardio">
+                        <h3>Alimentación saludable</h3>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card" onclick="openModal('modal3')">
+                        <img src="images/suplementos/logan-weaver-lgnwvr-k1KCiRaDQhs-unsplash.jpg"
+                            alt="Hombre realizando estiramientos despues de un entrenamiento de crossfit">
+                        <h3>Recuperación después de entrenar</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- Modales -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal1')">&times;</span>
+                    <h3>Suplementos</h3>
+                    <p>Los suplementos ayudan a complementar tu nutrición para lograr tus objetivos físicos. Proteína,
+                        creatina y multivitamínicos son algunos de los más utilizados.</p>
+                </div>
+            </div>
+
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal2')">&times;</span>
+                    <h3>Alimentación saludable</h3>
+                    <p>Una alimentación balanceada es clave para el rendimiento. Prioriza alimentos frescos, proteínas
+                        magras, grasas saludables y carbohidratos complejos.</p>
+                </div>
+            </div>
+
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal3')">&times;</span>
+                    <h3>Recuperación</h3>
+                    <p>Descansar, hidratarte y realizar estiramientos o masajes son esenciales para que tu cuerpo se
+                        recupere y mejore luego del entrenamiento.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL SECCION BLOG -->
+
+        <!-- INICIO SECCION DE TESTIMONIOS -->
+        <section class="testimonios">
+            <div class="container">
+                <!-- Columna izquierda -->
+                <div class="col-left">
+                    <div class="txt-test">
+                        <h3 class="txt_coment">Ellos ya vivieron la experiencia, ahora te lo cuentan</h3>
+                    </div>
+                </div>
+
+                <!-- Columna derecha -->
+                <div class="col-right">
+                    <div class="txt_test">
+                        <h3 class="txt_coment">COMENTARIOS</h3>
+                    </div>
+
+                    <div class="carrusel-comentarios">
+                        <div class="carrusel-wrapper">
+                            <div class="carrusel" id="carrusel">
+                                <div class="comentario">
+                                    <p>"Excelente servicio, ¡me encantó la experiencia!"</p>
+                                    <h4>- Ana Gómez</h4>
+                                </div>
+                                <div class="comentario">
+                                    <p>"Muy profesionales y atentos. Recomendado 100%."</p>
+                                    <h4>- Carlos Ruiz</h4>
+                                </div>
+                                <div class="comentario">
+                                    <p>"Volvería sin pensarlo. Gran equipo de trabajo."</p>
+                                    <h4>- Mariana López</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FINAL SECCION DE TESTIMONIOS -->
+        <!-- INICIO SECCION DE CALENDARIO -->
+        <section class="calendario">
+            <div class="container">
+                <h2 class="titulo-calendario">CALENDARIO DE RUTINAS</h2>
+                <div id='calendar'></div>
+                <!-- Modal -->
+                <div id="pdfModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Rutina del día</h3>
+                        <iframe id="pdfViewer" src="" width="100%" height="500px"></iframe>
+                        <div class="modal-buttons">
+                            <a id="downloadBtn" class="btn" href="" download>Descargar Rutina</a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- FINAL DE CALENDARIO -->
+        <!-- INICIO DE FOOTER -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="logo-content">
+                    <img src="images/LOGO/1x/Recurso 2.png" alt="imagen de logo para footer">
+                </div>
+
+                <div class="info-footer">
+                    <div class="suscripcion-footer">
+                        <h3>¡Suscribite al boletín de CrossFit!</h3>
+                        <p>Recibí entrenamientos, tips de nutrición y promociones exclusivas.</p>
+                        <form class="formulario-footer">
+                            <input type="text" placeholder="Nombre completo" required>
+                            <input type="email" placeholder="Correo electrónico" required>
+                            <button type="submit">Suscribirme</button>
+                        </form>
+                    </div>
+
+                    <!-- Redes Sociales -->
+                    <div class="redes-footer">
+                        <p>Seguinos en redes</p>
+                        <div class="iconos-redes">
+                            <a href="https://wa.me/tuNumero" target="_blank" aria-label="WhatsApp">
+                                <img src="images/redes/whatsapp.png" alt="WhatsApp">
+                            </a>
+                            <a href="https://instagram.com/tuPerfil" target="_blank" aria-label="Instagram">
+                                <img src="images/redes/instagram.png" alt="Instagram">
+                            </a>
+                            <a href="https://www.facebook.com/" target="_blank" aria-label="facebook">
+                                <img src="images/redes/facebook.png" alt="facebook">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- FINAL DE FOOTER -->
+    </main>
+    <script src="js/script.js"></script>
+    <script src="js/coments.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/calendar.js" defer></script>
+
+</body>
+
+</html>
